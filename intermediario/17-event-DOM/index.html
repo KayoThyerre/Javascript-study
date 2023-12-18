@@ -6,14 +6,29 @@
     <title>Como manipular os elementos do DOM</title>
 </head>
 <body>
-    <h1>Como manipular os elementos do DOM</h1>
+    <h1>Posts do Twitter</h1>
 
-    <p id="paragrafo1">Paragrafo 1</p>
-    <p>Paragrafo 2</p>
- 
-    <input type="text" name="email" class="tag-de-input" placeholder="Digite seu e-mail principal">
+    <article class="post">
+        <p><strong>Kayo Alarcon</strong></p> <span>@KayoNTemTwitter - 10 min</span>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum molestiae quam soluta minus ipsum aliquid in veniam vitae ratione, eligendi similique rem quae illum assumenda nesciunt esse, error at sit.
+        </p>
 
-    <input type="text" name="email" class="tag-de-input" placeholder="Digite seu e-mail secundário">
+        <br>
+
+        <div class="comentarios">
+            <h3>Comentários:</h3>
+
+            <input name="novo-comentario" type="text" placeholder="Digite o seu comentário">
+
+            <button onclick="adicionarComentario()">Adicionar comentário</button>
+
+            <br>
+
+            <div id="novos-comentarios"></div>
+        </div>
+
+    </article>
 
     <script type="text/javascript" src="./index.js"></script>
 </body>

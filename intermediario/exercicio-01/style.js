@@ -1,5 +1,10 @@
-function changeBgColor() {
-    let box = document.getElementsByClassName('box');
+const btnColorChanger = document.getElementById('color-changer');
 
-    console.log(box)
+const boxOne = document.getElementsByClassName('boxOne');
+
+btnColorChanger.addEventListener('click', changeColor);
+
+function changeColor() {
+    boxOne.classlist.remove(".azul");
+    boxOne.classlist.add(".vermelho");
 }

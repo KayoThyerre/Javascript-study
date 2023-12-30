@@ -25,5 +25,5 @@ function esconderImagemAberta() {
 }
 
 function mostrarOuEsconderSetas() {
-    
+    const naoEhAPrimeiraImagem = imagemAtual != 0;
 }

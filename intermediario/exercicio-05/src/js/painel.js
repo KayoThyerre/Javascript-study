@@ -19,6 +19,20 @@ setaAvancar.addEventListener("click", function() {
 
 });
 
+setaVoltar.addEventListener("click", function() {
+    if (imagemAtual === 0){
+        return
+    }
+    
+    esconderImagemAberta();
+
+    imagemAtual--;
+
+    imagens[imagemAtual].classList.add("mostrar");
+
+    mostrarOuEsconderSetas();
+});
+
 function esconderImagemAberta() {
     const imagemAberta = document.querySelector(".mostrar");
     imagemAberta.classList.remove("mostrar");
@@ -26,4 +40,16 @@ function esconderImagemAberta() {
 
 function mostrarOuEsconderSetas() {
     const naoEhAPrimeiraImagem = imagemAtual != 0;
+    if (naoEhAPrimeiraImagem) {
+        setaVoltar.classList.remove("opacidade");
+    } else {
+        setaVoltar.classList.add("opacidade");
+    }
+
+    const chegouNaUltimaImagem = imagemAtual !== 0 && imagemAtual === imagens.length - 1;
+    if (chegouNaUltimaImagem) {
+        setaAvancar.classList.add("opacidade");
+    } else {
+        setaAvancar.classList.remove("opacidade");
+    }
 }
